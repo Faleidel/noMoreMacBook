@@ -2,6 +2,11 @@
     <head>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <meta charset="utf-8"/>
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
+        
         <style>
             .title {
                 font-size: 60px;
@@ -27,6 +32,7 @@
                 margin: auto;
                 padding-top: 80px;
                 padding-bottom: 80px;
+                background: aliceblue;
             }
         </style>
     </head>
@@ -49,70 +55,74 @@
             </p>
         </div>
         
-        <table class="table table-stripped table-hover">
-            <tr>
-                <th>Name</th>
-                <th>Price</th>
-                <th>CPU</th>
-                <th>RAM</th>
-                <th>link</th>
-            </tr>
+        <table id="table" class="table table-stripped table-hover">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>CPU</th>
+                    <th>RAM</th>
+                    <th>link</th>
+                </tr>
+            </thead>
             
-            <tr>
-                <td>Lenovo Yoga 920</td>
-                <td>1750$</td>
-                <td>8th gen i7</td>
-                <td>16gb</td>
-                <td><a href="https://www3.lenovo.com/ca/en/laptops/yoga/yoga-900-series/Yoga-920-Vibes/p/88YG9000860">see at lenovo.com</a></td>
-            </tr>
-            
-            <tr>
-                <td>Microsoft Surface Pro</td>
-                <td>2600$</td>
-                <td>7th gen i7</td>
-                <td>16gb</td>
-                <td><a href="https://www.microsoft.com/en-ca/p/surface-pro/8nkt9wttrbjk/C2HQ">see at microsoft.com</a></td>
-            </tr>
-            
-            <tr>
-                <td>ThinkPad X1 Carbon (6th Gen)</td>
-                <td>1600$</td>
-                <td>8th gen i7</td>
-                <td>16gb</td>
-                <td><a href="https://www3.lenovo.com/ca/en/laptops/thinkpad/thinkpad-x/ThinkPad-X1-Carbon-6th-Gen/p/22TP2TXX16G">see at lenovo.com</a></td>
-            </tr>
-            
-            <tr>
-                <td>Dell Xps</td>
-                <td>2400$</td>
-                <td>8th gen i7</td>
-                <td>32gb</td>
-                <td><a href="https://www.dell.com/en-ca/shop/dell-laptops-netbooks-and-tablets/sf/xps-laptops?appliedRefinements=6084,6096">see at dell.com</a></td>
-            </tr>
-            
-            <tr>
-                <td>Razer Blade Stealth</td>
-                <td>1500$</td>
-                <td>7th gen i7</td>
-                <td>16gb</td>
-                <td><a href="https://www.razer.com/ca-en/gaming-laptops/razer-blade-stealth">see at razer.com</a></td>
-            </tr>
-            
-            <tr>
-                <td>Latitude 5590</td>
-                <td>2300$</td>
-                <td>8th gen i7</td>
-                <td>16gb</td>
-                <td><a href="https://www.dell.com/en-ca/work/shop/laptops-ultrabooks/sf/latitude-laptops?appliedRefinements=6094">see at dell.com</a></td>
-            </tr>
-            
-            <tr>
-                <td>Macbook Pro 13-inch</td>
-                <td>1700$</td>
-                <td>7th gen i7</td>
-                <td>16gb</td>
-                <td><a href="https://www.apple.com/xf/shop/buy-mac/macbook-pro?product=MPXV2C/A&step=config">see at apple.com</a></td>
-            </tr>
+            <tbody>
+                <tr>
+                    <td>Lenovo Yoga 920</td>
+                    <td>1750$</td>
+                    <td>8th gen i7</td>
+                    <td>16gb</td>
+                    <td><a href="https://www3.lenovo.com/ca/en/laptops/yoga/yoga-900-series/Yoga-920-Vibes/p/88YG9000860">see at lenovo.com</a></td>
+                </tr>
+                
+                <tr>
+                    <td>Microsoft Surface Pro</td>
+                    <td>2600$</td>
+                    <td>7th gen i7</td>
+                    <td>16gb</td>
+                    <td><a href="https://www.microsoft.com/en-ca/p/surface-pro/8nkt9wttrbjk/C2HQ">see at microsoft.com</a></td>
+                </tr>
+                
+                <tr>
+                    <td>ThinkPad X1 Carbon (6th Gen)</td>
+                    <td>1600$</td>
+                    <td>8th gen i7</td>
+                    <td>16gb</td>
+                    <td><a href="https://www3.lenovo.com/ca/en/laptops/thinkpad/thinkpad-x/ThinkPad-X1-Carbon-6th-Gen/p/22TP2TXX16G">see at lenovo.com</a></td>
+                </tr>
+                
+                <tr>
+                    <td>Dell Xps</td>
+                    <td>2400$</td>
+                    <td>8th gen i7</td>
+                    <td>32gb</td>
+                    <td><a href="https://www.dell.com/en-ca/shop/dell-laptops-netbooks-and-tablets/sf/xps-laptops?appliedRefinements=6084,6096">see at dell.com</a></td>
+                </tr>
+                
+                <tr>
+                    <td>Razer Blade Stealth</td>
+                    <td>1500$</td>
+                    <td>7th gen i7</td>
+                    <td>16gb</td>
+                    <td><a href="https://www.razer.com/ca-en/gaming-laptops/razer-blade-stealth">see at razer.com</a></td>
+                </tr>
+                
+                <tr>
+                    <td>Latitude 5590</td>
+                    <td>2300$</td>
+                    <td>8th gen i7</td>
+                    <td>16gb</td>
+                    <td><a href="https://www.dell.com/en-ca/work/shop/laptops-ultrabooks/sf/latitude-laptops?appliedRefinements=6094">see at dell.com</a></td>
+                </tr>
+                
+                <tr>
+                    <td>Macbook Pro 13-inch</td>
+                    <td>1700$</td>
+                    <td>7th gen i7</td>
+                    <td>16gb</td>
+                    <td><a href="https://www.apple.com/xf/shop/buy-mac/macbook-pro?product=MPXV2C/A&step=config">see at apple.com</a></td>
+                </tr>
+            </tbody>
         </table>
         
         <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -123,6 +133,15 @@
           gtag('js', new Date());
         
           gtag('config', 'UA-121670427-1');
+        </script>
+        
+        <script>
+            $(document).ready(function() {
+                $('#table').DataTable({ paging: false
+                                      , searching: false
+                                      , info: false
+                                      });
+            });
         </script>
     </body>
 </html>
