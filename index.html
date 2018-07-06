@@ -6,7 +6,7 @@
         <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
         <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
         <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
-        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/accounting.js/0.4.1/accounting.min.js"></script>
         <title>No More MacBook</title>
         
         <style>
@@ -80,80 +80,14 @@
                     <th>CPU</th>
                     <th>RAM</th>
                     <th>Repair score</th>
-                    <th>link</th>
+                    <th>Product</th>
                     <th>Review</th>
                 </tr>
             </thead>
             
             <tbody>
                 <tr>
-                    <td>Lenovo Yoga 920</td>
-                    <td>1750$</td>
-                    <td>8th gen i7</td>
-                    <td>16gb</td>
-                    <td>10/10</td>
-                    <td><a href="https://www3.lenovo.com/ca/en/laptops/yoga/yoga-900-series/Yoga-920-Vibes/p/88YG9000860">link</a></td>
-                    <td><a href="https://walnuthilldesign.com/lenovo-yoga-920-review/">link</a></td>
-                </tr>
-                
-                <tr>
-                    <td>Microsoft Surface Pro</td>
-                    <td>2600$</td>
-                    <td>7th gen i7</td>
-                    <td>16gb</td>
-                    <td>2/10</td>
-                    <td><a href="https://www.microsoft.com/en-ca/p/surface-pro/8nkt9wttrbjk/C2HQ">link</a></td>
-                    <td><a href="https://venturebeat.com/2018/06/30/small-tech-companies-will-be-the-next-victims-of-brick-and-mortars-collapse/">link</a></td>
-                </tr>
-                
-                <tr>
-                    <td>ThinkPad X1 Carbon (6th Gen)</td>
-                    <td>1600$</td>
-                    <td>8th gen i7</td>
-                    <td>16gb</td>
-                    <td>-</td>
-                    <td><a href="https://www3.lenovo.com/ca/en/laptops/thinkpad/thinkpad-x/ThinkPad-X1-Carbon-6th-Gen/p/22TP2TXX16G">link</a></td>
-                    <td><a href="https://arstechnica.com/gadgets/2018/03/thinkpad-x1-carbon-2018-review-the-only-laptop-in-a-professionals-paradise/">link</a></td>
-                </tr>
-                
-                <tr>
-                    <td>Dell Xps</td>
-                    <td>2400$</td>
-                    <td>8th gen i7</td>
-                    <td>32gb</td>
-                    <td>7/10</td>
-                    <td><a href="https://www.dell.com/en-ca/shop/dell-laptops-netbooks-and-tablets/sf/xps-laptops?appliedRefinements=6084,6096">link</a></td>
-                    <td><a href="https://itsfoss.com/dell-xps-13-ubuntu-review/">link</a></td>
-                </tr>
-                
-                <tr>
-                    <td>Razer Blade Stealth</td>
-                    <td>1500$</td>
-                    <td>7th gen i7</td>
-                    <td>16gb</td>
-                    <td>-</td>
-                    <td><a href="https://www.razer.com/ca-en/gaming-laptops/razer-blade-stealth">link</a></td>
-                    <td><a href="https://drlongnecker.com/blog/2017/03/razer-blade-stealth-a-multi-tasking-developers-review/">link</a></td>
-                </tr>
-                
-                <tr>
-                    <td>Latitude 5590</td>
-                    <td>2300$</td>
-                    <td>8th gen i7</td>
-                    <td>16gb</td>
-                    <td>-</td>
-                    <td><a href="https://www.dell.com/en-ca/work/shop/laptops-ultrabooks/sf/latitude-laptops?appliedRefinements=6094">link</a></td>
-                    <td><a href="http://laptopmedia.com/review/dell-latitude-15-5590-review-the-new-core-i7-8650u-in-a-business-outfit/">link</a></td>
-                </tr>
-                
-                <tr class="mac">
-                    <td>Macbook Pro 13-inch</td>
-                    <td>1700$</td>
-                    <td>7th gen i7</td>
-                    <td>16gb</td>
-                    <td>1/10</td>
-                    <td><a href="https://www.apple.com/xf/shop/buy-mac/macbook-pro?product=MPXV2C/A&step=config">link</a></td>
-                    <td><a href="https://www.macworld.co.uk/review/mac-laptops/macbook-pro-13-inch-2017-review-3660144/">link</a></td>
+                    <td colspan="7">Loading data...</td>
                 </tr>
             </tbody>
         </table>
@@ -173,12 +107,68 @@
         </script>
         
         <script>
-            $(document).ready(function() {
-                $('#table').DataTable({ paging: false
-                                      , searching: false
-                                      , info: false
-                                      });
-            });
+                $(document).ready(function () {
+                    $('#table').DataTable({
+                        paging: false
+                        , searching: false
+                        , info: false
+                        , ajax: {
+                            url: 'data.json',
+                            dataSrc: 'laptops'
+                        }
+                        , columns: [
+                            {
+                                data: "name"
+                            },
+                            {
+                                data: "price",
+                                render: function (data, type) {
+                                    if (type === 'display' | type === 'filter') {
+                                        return accounting.formatMoney(data);
+                                    }
+                                    return data;
+                                }
+                            },
+                            {
+                                data: "cpu"
+                            },
+                            {
+                                data: "ram"
+                            },
+                            {
+                                data: "repairScore",
+                                render: function(data, type) {
+                                    if (type === 'display') {
+                                        return data === 0
+                                        ? "-"
+                                        : "" + data + "/10";
+                                    }
+                                    return data;
+                                }
+                            },
+                            {
+                                data: "productLink",
+                                render: function(data) {
+                                    return '<a href="' + data + '">[link]</a>';
+                                }
+                            },
+                            {
+                                data: "reviewLink",
+                                render: function(data) {
+                                    return '<a href="' + data + '">[link]</a>';
+                                }
+
+                            },
+                        ],
+                        createdRow: function(row, data, index) {
+                            if (data.name.indexOf("Macbook") > -1) {
+                                $(row).addClass("mac");
+                            }
+                        }
+
+                    });
+                });
+            $("")
         </script>
     </body>
 </html>

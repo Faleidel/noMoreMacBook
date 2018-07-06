@@ -63,6 +63,15 @@
             "repairScore": 1,
             "productLink": "https://www.apple.com/xf/shop/buy-mac/macbook-pro?product=MPXV2C/A&step=config",
             "reviewLink": "https://www.macworld.co.uk/review/mac-laptops/macbook-pro-13-inch-2017-review-3660144/"
+          },
+          {
+            "name": "MateBook X Pro",
+            "price": 1700.0,
+            "cpu": "8th gen i7",
+            "ram": "16GB",
+            "repairScore": 0,
+            "productLink": "https://consumer.huawei.com/en/tablets/matebook-x-pro/",
+            "reviewLink": "https://www.theverge.com/2018/5/29/17396818/huawei-matebook-x-pro-laptop-review-specs-price"
           }
     ]
 }
