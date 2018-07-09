@@ -1,34 +1,35 @@
 <html>
+
     <head>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <meta charset="utf-8"/>
-        
+
         <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
         <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
         <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
-        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/accounting.js/0.4.1/accounting.min.js"></script>
         <title>No More MacBook</title>
-        
+
         <style>
             .title {
                 font-size: 60px;
                 margin-bottom: 40px;
             }
-            
+
             .intro {
                 font-size: 20px;
             }
-            
+
             .disclaimer{
                 font-size: 20px;
                 color: #c04747;
                 margin-bottom: 60px;
             }
-            
+
             table {
                 font-size: 20px;
             }
-            
+
             body {
                 max-width: 840px;
                 margin: auto;
@@ -36,42 +37,42 @@
                 padding-bottom: 80px;
                 background: aliceblue;
             }
-            
+
             .mac {
                 color: grey;
             }
-            
+
             .githubLink {
                 margin-top: 40px;
                 color: lightgrey;
             }
-            
+
             .githubLink a {
                 color: #93a8b9;
             }
         </style>
     </head>
-    
+
     <body>
         <div class="title">
             No More MacBook ❌
         </div>
-        
+
         <div class="intro">
-            <p>With the growing discontent in how apple is making the macbooks (<a href="https://www.theverge.com/2016/11/7/13548052/the-macbook-pro-lie">link</a> <a href="https://marco.org/2017/11/24/fixing-the-macbook-pro">link</a>) and looking myself to replace my own 2012 macbook pro I decided to compile a list of suitable alternatives for my next computer.</p>
+            <p>With the growing discontent in how apple is making the MacBooks (<a href="https://www.theverge.com/2016/11/7/13548052/the-macbook-pro-lie">link</a> <a href="https://marco.org/2017/11/24/fixing-the-macbook-pro">link</a>) and looking myself to replace my own 2012 MacBook Pro I decided to compile a list of suitable alternatives for my next computer.</p>
             
             <p>This is not an exhaustive list but only a small research I did in a weekend, feel free to contact me if some info is outdated or if you want something added.</p>
         </div>
-        
+
         <div class="disclaimer">
             <p>Disclaimer:</p>
-            
-            <p>Prices are kind of rounded and may have changed. Sometimes there are multiple configurations available, in these cases I took the best cpu/ram combo without touching the hdd/ssd. A link is provided for the source of information. Some computer can also have big (10-20%) discount if you wait so you can get them at less then the price listed here.
+
+            <p>Prices are kind of rounded and may have changed. Sometimes there are multiple configurations available, in these cases I took the best cpu/ram combo without touching the hard drive. A link is provided for the source of information. Some computers can also have large (10-20%) discount if you wait so you can get them at less than the price listed here.
             </p>
-            
+
             <p>Repair scores are taken from ifixit.com</p>
         </div>
-        
+
         <table id="table" class="table table-stripped table-hover">
             <thead style="cursor: pointer;">
                 <tr>
@@ -80,104 +81,93 @@
                     <th>CPU</th>
                     <th>RAM</th>
                     <th>Repair score</th>
-                    <th>link</th>
+                    <th>Product</th>
                     <th>Review</th>
                 </tr>
             </thead>
-            
+
             <tbody>
                 <tr>
-                    <td>Lenovo Yoga 920</td>
-                    <td>1750$</td>
-                    <td>8th gen i7</td>
-                    <td>16gb</td>
-                    <td>10/10</td>
-                    <td><a href="https://www3.lenovo.com/ca/en/laptops/yoga/yoga-900-series/Yoga-920-Vibes/p/88YG9000860">link</a></td>
-                    <td><a href="https://walnuthilldesign.com/lenovo-yoga-920-review/">link</a></td>
-                </tr>
-                
-                <tr>
-                    <td>Microsoft Surface Pro</td>
-                    <td>2600$</td>
-                    <td>7th gen i7</td>
-                    <td>16gb</td>
-                    <td>2/10</td>
-                    <td><a href="https://www.microsoft.com/en-ca/p/surface-pro/8nkt9wttrbjk/C2HQ">link</a></td>
-                    <td><a href="https://venturebeat.com/2018/06/30/small-tech-companies-will-be-the-next-victims-of-brick-and-mortars-collapse/">link</a></td>
-                </tr>
-                
-                <tr>
-                    <td>ThinkPad X1 Carbon (6th Gen)</td>
-                    <td>1600$</td>
-                    <td>8th gen i7</td>
-                    <td>16gb</td>
-                    <td>-</td>
-                    <td><a href="https://www3.lenovo.com/ca/en/laptops/thinkpad/thinkpad-x/ThinkPad-X1-Carbon-6th-Gen/p/22TP2TXX16G">link</a></td>
-                    <td><a href="https://arstechnica.com/gadgets/2018/03/thinkpad-x1-carbon-2018-review-the-only-laptop-in-a-professionals-paradise/">link</a></td>
-                </tr>
-                
-                <tr>
-                    <td>Dell Xps</td>
-                    <td>2400$</td>
-                    <td>8th gen i7</td>
-                    <td>32gb</td>
-                    <td>7/10</td>
-                    <td><a href="https://www.dell.com/en-ca/shop/dell-laptops-netbooks-and-tablets/sf/xps-laptops?appliedRefinements=6084,6096">link</a></td>
-                    <td><a href="https://itsfoss.com/dell-xps-13-ubuntu-review/">link</a></td>
-                </tr>
-                
-                <tr>
-                    <td>Razer Blade Stealth</td>
-                    <td>1500$</td>
-                    <td>7th gen i7</td>
-                    <td>16gb</td>
-                    <td>-</td>
-                    <td><a href="https://www.razer.com/ca-en/gaming-laptops/razer-blade-stealth">link</a></td>
-                    <td><a href="https://drlongnecker.com/blog/2017/03/razer-blade-stealth-a-multi-tasking-developers-review/">link</a></td>
-                </tr>
-                
-                <tr>
-                    <td>Latitude 5590</td>
-                    <td>2300$</td>
-                    <td>8th gen i7</td>
-                    <td>16gb</td>
-                    <td>-</td>
-                    <td><a href="https://www.dell.com/en-ca/work/shop/laptops-ultrabooks/sf/latitude-laptops?appliedRefinements=6094">link</a></td>
-                    <td><a href="http://laptopmedia.com/review/dell-latitude-15-5590-review-the-new-core-i7-8650u-in-a-business-outfit/">link</a></td>
-                </tr>
-                
-                <tr class="mac">
-                    <td>Macbook Pro 13-inch</td>
-                    <td>1700$</td>
-                    <td>7th gen i7</td>
-                    <td>16gb</td>
-                    <td>1/10</td>
-                    <td><a href="https://www.apple.com/xf/shop/buy-mac/macbook-pro?product=MPXV2C/A&step=config">link</a></td>
-                    <td><a href="https://www.macworld.co.uk/review/mac-laptops/macbook-pro-13-inch-2017-review-3660144/">link</a></td>
+                    <td colspan="7">Loading data...</td>
                 </tr>
             </tbody>
         </table>
-        
+
         <p class="githubLink">
             See something to fix? Send a merge request at <a href="https://github.com/Faleidel/noMoreMacBook">https://github.com/Faleidel/noMoreMacBook</a>
         </p>
-        
+
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121670427-1"></script>
         <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-        
-          gtag('config', 'UA-121670427-1');
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-121670427-1');
         </script>
-        
+
         <script>
-            $(document).ready(function() {
-                $('#table').DataTable({ paging: false
-                                      , searching: false
-                                      , info: false
-                                      });
+            $(document).ready(function () {
+                $('#table').DataTable({
+                    paging: false
+                    , searching: false
+                    , info: false
+                    , ajax: {
+                        url: 'data.json',
+                        dataSrc: 'laptops'
+                    }
+                    , columns: [
+                        {
+                            data: "name"
+                        },
+                        {
+                            data: "price",
+                            render: function (data, type) {
+                                if (type === 'display' | type === 'filter') {
+                                    return accounting.formatMoney(data);
+                                }
+                                return data;
+                            }
+                        },
+                        {
+                            data: "cpu"
+                        },
+                        {
+                            data: "ram"
+                        },
+                        {
+                            data: "repairScore",
+                            render: function (data, type) {
+                                if (type === 'display') {
+                                    return data === 0
+                                        ? "-"
+                                        : "" + data + "/10";
+                                }
+                                return data;
+                            }
+                        },
+                        {
+                            data: "productLink",
+                            render: function (data) {
+                                return '<a href="' + data + '">[link]</a>';
+                            }
+                        },
+                        {
+                            data: "reviewLink",
+                            render: function (data) {
+                                return '<a href="' + data + '">[link]</a>';
+                            }
+
+                        },
+                    ],
+                    createdRow: function (row, data, index) {
+                        if (data.name.indexOf("Macbook") > -1) {
+                            $(row).addClass("mac");
+                        }
+                    }
+
+                });
             });
         </script>
     </body>

@@ -1,0 +1,77 @@
+{
+    "lastUpdate": "2018-07-06T05:55:10.051Z",
+    "laptops": [
+        {
+            "name": "Lenovo Yoga 920",
+            "price": 1750.0,
+            "cpu": "8th gen i7",
+            "ram": "16GB",
+            "repairScore": 10,
+            "productLink": "https://www3.lenovo.com/ca/en/laptops/yoga/yoga-900-series/Yoga-920-Vibes/p/88YG9000860",
+            "reviewLink": "https://walnuthilldesign.com/lenovo-yoga-920-review/"
+        },
+        {
+            "name": "Microsoft Surface Pro",
+            "price": 2600.0,
+            "cpu": "7th gen i7",
+            "ram": "16GB",
+            "repairScore": 2,
+            "productLink": "https://www.microsoft.com/en-ca/p/surface-pro/8nkt9wttrbjk/C2HQ",
+            "reviewLink": "https://venturebeat.com/2018/06/30/small-tech-companies-will-be-the-next-victims-of-brick-and-mortars-collapse/"
+          },
+          {
+            "name": "ThinkPad X1 Carbon (6th Gen)",
+            "price": 1600.0,
+            "cpu": "8th gen i7",
+            "ram": "16GB",
+            "repairScore": 0,
+            "productLink": "https://www3.lenovo.com/ca/en/laptops/thinkpad/thinkpad-x/ThinkPad-X1-Carbon-6th-Gen/p/22TP2TXX16G",
+            "reviewLink": "https://arstechnica.com/gadgets/2018/03/thinkpad-x1-carbon-2018-review-the-only-laptop-in-a-professionals-paradise/"
+          },
+          {
+            "name": "Dell Xps",
+            "price": 2400.0,
+            "cpu": "8th gen i7",
+            "ram": "32GB",
+            "repairScore": 7,
+            "productLink": "https://www.dell.com/en-ca/shop/dell-laptops-netbooks-and-tablets/sf/xps-laptops?appliedRefinements=6084,6096",
+            "reviewLink": "https://itsfoss.com/dell-xps-13-ubuntu-review/"
+          },
+          {
+            "name": "Razer Blade Stealth",
+            "price": 1500.0,
+            "cpu": "7th gen i7",
+            "ram": "16GB",
+            "repairScore": 0,
+            "productLink": "https://www.razer.com/ca-en/gaming-laptops/razer-blade-stealth",
+            "reviewLink": "https://drlongnecker.com/blog/2017/03/razer-blade-stealth-a-multi-tasking-developers-review/"
+          },
+          {
+            "name": "Latitude 5590",
+            "price": 2300.0,
+            "cpu": "8th gen i7",
+            "ram": "16GB",
+            "repairScore": 0,
+            "productLink": "https://www.dell.com/en-ca/work/shop/laptops-ultrabooks/sf/latitude-laptops?appliedRefinements=6094",
+            "reviewLink": "http://laptopmedia.com/review/dell-latitude-15-5590-review-the-new-core-i7-8650u-in-a-business-outfit/"
+          },
+          {
+            "name": "Macbook Pro 13-inch",
+            "price": 1700.0,
+            "cpu": "7th gen i7",
+            "ram": "16GB",
+            "repairScore": 1,
+            "productLink": "https://www.apple.com/xf/shop/buy-mac/macbook-pro?product=MPXV2C/A&step=config",
+            "reviewLink": "https://www.macworld.co.uk/review/mac-laptops/macbook-pro-13-inch-2017-review-3660144/"
+          },
+          {
+            "name": "MateBook X Pro",
+            "price": 1700.0,
+            "cpu": "8th gen i7",
+            "ram": "16GB",
+            "repairScore": 0,
+            "productLink": "https://consumer.huawei.com/en/tablets/matebook-x-pro/",
+            "reviewLink": "https://www.theverge.com/2018/5/29/17396818/huawei-matebook-x-pro-laptop-review-specs-price"
+          }
+    ]
+}
